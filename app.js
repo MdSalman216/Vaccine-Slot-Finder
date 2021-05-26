@@ -1,17 +1,17 @@
 // add .env command here
 const express = require("express");
 const bodyParser = require("body-parser");
+const ejs = require("ejs");
 const request = require("request");
 const https = require("https");
 
 const app = express();
-
+app.set('view engine', 'ejs');
 app.use(express.static("public"));
-
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", function(req,res){
-  res.sendFile(__dirname + "/index.html");
+  res.render("main");
 });
 
 
@@ -43,10 +43,7 @@ app.post("/", function(req,res){
                   else
                   {
                     // res.send(result);
-                    result.forEach(function(i){
-                      res.write(i.name);
-                    }); //forEach
-                    res.send();
+                    res.render("home",{data : result}); 
                   }
               });
 
@@ -64,18 +61,16 @@ app.post("/", function(req,res){
             }
             else
             {
-              // res.sendFile(__dirname + "/failure.html");
-              res.send("Please Enter correct Pincode"); 
+              res.sendFile(__dirname + "/failure.html"); 
             }   
-            
-           
-
       }); //https.request()
-
-      // console.log(request);
       request.end();
 
     }); //app.post()
+
+    app.post("/failure", function(req,res){
+      res.redirect("/");
+    });
 
 
 

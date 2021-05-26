@@ -1,0 +1,48 @@
+<%- include("partials/header") -%>
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Covid Vaccine Slot Finder</h1>
+          <p class="lead text-muted">Search by Pincode or by District Name</p>
+          <p>
+            <form class="form-inline" action="/" method="post">
+              <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control" id="inputPassword2" placeholder="Enter Pincode" name="Pincode">
+              </div>
+              <button type="submit" class="btn btn-warning btn-lg">Search</button>
+            </form> 
+          </p>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row">
+            <% for(var i=0;i<data.length;i++) { %>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow text-white bg-secondary">
+
+                <div class="card-body">
+                  <div class="card-header">Center Name : <%= data[i].name %> </div>
+                    <div class="my-3 p-3 rounded box-shadow">
+
+                      <p class="card-text"><strong d-block text-gray-dark>Available Slots for Dose 1 : </strong><%= data[i].available_capacity_dose1 %></p>
+                      <p class="card-text"><strong d-block text-gray-dark>Available Slots for Dose 2 : </strong><%= data[i].available_capacity_dose2 %></p>
+
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center"></div>
+                  
+                </div>
+              </div>
+            </div>
+            <% } %>
+
+    </main>
+
+    
+<%- include("partials/footer") -%>
+
+   
