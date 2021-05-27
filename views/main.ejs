@@ -1,23 +1,90 @@
 <%- include("partials/header") -%>
 
-    <main role="main">
-
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Covid Vaccine Slot Finder</h1>
-          <p class="lead text-muted">Search by Pincode or by District Name</p>
-          <p>
-            <form class="form-inline" action="/" method="post">
-              <div class="form-group mx-sm-3 mb-2">
-                <input type="text" class="form-control" id="inputPassword2" placeholder="Enter Pincode" name="Pincode">
+<div class="container-fluid">
+  <section id="minimal-statistics">
+   <div class="row">
+      <div class="col-xl-4 col-sm-6 col-12"> 
+        <div class="card">
+          <div class="card-content">
+            <div class="card-body">
+              <div class="media d-flex">
+                <div class="align-self-center">
+                  <!-- <i class="icon-pencil primary font-large-2 float-left"></i> -->
+                  <!-- <img src="https://img.icons8.com/color/48/000000/coronavirus--v2.png"/> -->
+                  <img src="images/sneezing.gif" id="heartbeat"/>
+                </div>
+                <div class="media-body text-right" id="covid-font" style="color:blue;">
+                  <h3><%= confirmed %></h3>
+                  <span>Confirmed</span>
+                </div>
               </div>
-              <button type="submit" class="btn btn-warning btn-lg">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-sm-6 col-12">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-body">
+              <div class="media d-flex">
+                <div class="align-self-center">
+                  <!-- <i class="icon-speech warning font-large-2 float-left"></i> -->
+                  <!-- <i class="fas fa-heartbeat float-left font-large-2"></i> -->
+                   <img src="images/recover.gif" id="heartbeat"/>
+                   <img src="images/home.gif" id="heartbeat"/>
+                </div>
+                <div class="media-body text-right" id="covid-font" style="color:lightgreen;">
+                  <h3><%= recovered %></h3>
+                  <span>Recovered</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-sm-6 col-12">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-body">
+              <div class="media d-flex">
+                <div class="align-self-center">
+                  <!-- <i class="icon-graph success font-large-2 float-left"></i> -->
+                  <img src="images/brokenheart.gif" id="heartbeat"/>
+                </div>
+                <div class="media-body text-right" id="covid-font" style="color:red;">
+                  <h3><%= deaths%></h3>
+                  <span>Deceased</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+</div>
+
+
+
+    <!-- <main class="main" role="main"> -->
+
+      <section class="jumbotron" id="SearchBox">
+        <div class="container">
+          <img class="d-block mx-auto mb-4 main_img" src="images/corona.gif" alt="" width="150" height="150">
+          <p>
+            <form class="form-block search" action="/" method="post">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" id="inputPassword2" name="Pincode" placeholder="Enter Your Area Pincode" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-warning btn-lg" type="submit">Search</button>
+                </div>
+              </div>
             </form> 
           </p>
         </div>
       </section>
 
-    </main>
+    <!-- </main> -->
+    
 
     
 <%- include("partials/footer") -%>

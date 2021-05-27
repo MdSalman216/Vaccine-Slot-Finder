@@ -67,11 +67,14 @@
 
     <!-- <main role="main"> -->
 
-      <section class="jumbotron" id="SearchBox">
+      <section class="jumbotron text-center">
         <div class="container">
           <img class="d-block mx-auto mb-4 main_img" src="images/corona.gif" alt="" width="150" height="150">
+          <div class="alert alert-danger" role="alert">
+            <%= content %>
+          </div>
           <p>
-            <form class="form-block search" action="/" method="post">
+            <form class="form-block" action="/" method="post">
               <div class="input-group mb-3">
                 <input type="text" class="form-control" id="inputPassword2" name="Pincode" placeholder="Enter Your Area Pincode" aria-label="Recipient's username" aria-describedby="basic-addon2">
                 <div class="input-group-append">
@@ -82,47 +85,6 @@
           </p>
         </div>
       </section>
-
-            
-
-
-
-          <!-- <div class="title">Table</div> -->
-       
-        <div class="card-body table-responsive">
-          <div style="overflow-x:auto;overflow-y:auto"> 
-            <!-- Horizontal & vertical scrolling -->
-            <table id="customers" >
-              <thead>
-                <tr>
-                  <th style="width:15%;">Center Name</th>
-                  <th style="width:12%;">Center Address</th>
-                  <th class="number" style="width:5%;">Age</th>
-                  <th class="number" style="width:10%;">Available Capacity</th>
-                  <th class="number" style="width:5%;">Dose1</th>
-                  <th class="number" style="width:5%;">Dose2</th>
-                  <th class="text" style="width:5%;">Vaccine Name</th>
-                  <th style="width:10%;">Date</th>
-                </tr>
-              </thead>
-              <tbody class="no-border-x">
-                <% for(var i=0;i<data.length;i++) { %>
-                  <tr onclick="window.location='https://www.cowin.gov.in/home';">
-                    <td><%= data[i].name %></td>
-                    <td><%= data[i].address %></td> 
-                    <td class="number"><%= data[i].min_age_limit %>+</td>
-                    <td class="number"><%= data[i].available_capacity %></td>
-                    <td class="number"><%= data[i].available_capacity_dose1 %></td>
-                    <td class="number"><%= data[i].available_capacity_dose2 %></td>
-                    <td class="text"><%= data[i].vaccine%></td>
-                    <td><%= data[i].date %></td> 
-                  </tr>
-                <% } %> 
-              </tbody>
-            </table>
-          </div>
-        </div>
-
 
     <!-- </main> -->
 

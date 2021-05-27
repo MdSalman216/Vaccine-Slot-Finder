@@ -2,12 +2,29 @@
   --jumbotron-padding-y: 3rem;
 }
 
+
+/* .main_img {
+opacity: 0.5;
+} */
+
+/* .main_img:hover{
+  opacity: 1;
+} */
+
+
 .jumbotron {
   padding-top: var(--jumbotron-padding-y);
   padding-bottom: var(--jumbotron-padding-y);
   margin-bottom: 0;
-  background-color: #fff;
+  background-color: white;
 }
+
+main {
+  padding-bottom: 9rem;
+  background-color: white;
+}
+
+
 @media (min-width: 768px) {
   .jumbotron {
     padding-top: calc(var(--jumbotron-padding-y) * 2);
@@ -30,6 +47,7 @@
 footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  opacity: 0.8;
 }
 
 footer p {
@@ -37,3 +55,114 @@ footer p {
 }
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+
+.syringe_icon {
+  margin-right: 0.5rem;
+  margin-left: 1rem;
+}
+
+.navbar_title {
+  font-family: 'Rubik', sans-serif;
+  color: grey;
+  padding-left: 0.5rem;
+}
+
+
+.white-section {
+  background-color: black;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  margin-top : 50px;
+}
+
+.social-icon {
+  margin: 20px 10px;
+}
+
+@media (max-width: 1028px) {
+
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
+  }
+}
+
+.container-fluid{
+  padding: 4px 10px;
+  justify-content: center;
+}
+
+.social-icon{
+  color: #fff;
+  margin: 20px 10px;
+  justify-content: center;
+}
+
+
+#copyright {
+  font-family: 'Rubik', sans-serif;
+  color: grey;
+}
+
+
+/* Table */
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #FFA000;
+  color: white;
+}
+
+#link_id {
+  text-decoration: none;
+  color: black;
+}
+
+[data-href] { cursor: pointer; }
+
+#SearchBox {
+padding-bottom: 50px;
+}
+
+/* covid */
+#covid-font {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: bold;
+  /* color : red; */
+}
+
+.fa-heartbeat {
+  color: lightgreen;
+}
+
+.fa-heart-broken {
+  color: red;
+}
+
+#heartbeat{
+  height : 4rem;
+  width : 4rem;
+}
+
+
