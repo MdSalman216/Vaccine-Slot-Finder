@@ -31,7 +31,7 @@ const request1 = https.request(covidUrl, options, function(response){
       confirmed = numberWithCommas(covidResult.confirmed.value);
       recovered = numberWithCommas(covidResult.recovered.value);
       deaths = numberWithCommas(covidResult.deaths.value);
-      // console.log(confirmed,recovered,deaths);
+      // console.log(covidResult);
     });
      
   }
@@ -86,7 +86,7 @@ const cowinUrl = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/f
             }
             else
             {
-              res.render("failure",{content : "Server Down. Try Again later.", confirmed:confirmed, recovered:recovered, deaths:deaths}); 
+              res.render("failure",{content : "OOPs! Government restricts API for third party integration.", confirmed:confirmed, recovered:recovered, deaths:deaths}); 
             }   
       }); //https.request()
       request.end();
