@@ -92,42 +92,6 @@ const cowinUrl = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/f
       }); //https.request()
       request.end();
 
-
-
-  //     function numberWithCommas(x) {
-  //       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  //     }
-
-
-
-  //     // Covid 19 API call
-  //     const covidUrl = "https://covid19.mathdro.id/api/countries/India/";
-  //     const request1 = https.request(covidUrl, options, function(response){
-  //       //Here response sent by the CoWin API
-
-  //       if(response.statusCode === 200)
-  //       {
-  //         response.on('data', function(data) {
-
-  //           const result = JSON.parse(data);
-
-  //           const confirmed = numberWithCommas(result.confirmed.value);
-  //           const recovered = numberWithCommas(result.recovered.value);
-  //           const deaths = numberWithCommas(result.deaths.value);
-  //           console.log(confirmed,recovered,deaths);
-  //         });
-           
-  //       }
-  //       else
-  //       console.log("error");
-
-      
-         
-  // }); //https.request()
-  // request1.end();
-
-     
-
     }); //app.post()
 
     app.post("/failure", function(req,res){
@@ -158,6 +122,6 @@ const cowinUrl = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/f
 
 
 
-app.listen(process.env.PORT || 4000, function(){
-  console.log("Server running on port 4000....")
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Server running on port 3000....")
 });

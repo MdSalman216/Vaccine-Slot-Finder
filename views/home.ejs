@@ -107,7 +107,7 @@
               </thead>
               <tbody class="no-border-x">
                 <% for(var i=0;i<data.length;i++) { %>
-                  <tr onclick="window.location='https://www.cowin.gov.in/home';">
+                  <tr data-href onclick="window.location='https://www.cowin.gov.in/home';">
                     <td><%= data[i].name %></td>
                     <td><%= data[i].address %></td> 
                     <td class="number"><%= data[i].min_age_limit %>+</td>
