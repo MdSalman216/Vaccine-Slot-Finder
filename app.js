@@ -98,8 +98,7 @@ const cowinUrl = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/f
       res.redirect("/");
     });
 
-    let port = process.env.PORT;
-    if (port == null || port == "") {
-      port = 3000;
-    }
-    app.listen(port);
+    
+    app.listen(process.env.PORT || 3000, function(){
+      console.log("Server Started on port 3000...")
+    });
