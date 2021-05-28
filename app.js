@@ -1,4 +1,3 @@
-// add .env command here
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -57,7 +56,7 @@ let month = d.getMonth()+1;
 let year = d.getFullYear();
 let currDate = date+"-"+month+"-"+year;
   
-const cowinUrl = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=" + pincode + "&date=" + currDate;
+const cowinUrl = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode="+pincode+"&date=" + currDate;
 
   const options = { method : 'GET' };
   
@@ -87,7 +86,7 @@ const cowinUrl = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/f
             }
             else
             {
-              res.render("failure",{content : "Please Enter Correct Pincode.", confirmed:confirmed, recovered:recovered, deaths:deaths}); 
+              res.render("failure",{content : "Server Down. Try Again later.", confirmed:confirmed, recovered:recovered, deaths:deaths}); 
             }   
       }); //https.request()
       request.end();
@@ -98,7 +97,7 @@ const cowinUrl = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/f
       res.redirect("/");
     });
 
-    
+
     app.listen(process.env.PORT || 3000, function(){
       console.log("Server Started on port 3000...")
     });
