@@ -8,4 +8,4 @@
 ## Website link : https://vaccineslotfinder.herokuapp.com/
 
 ## Note : 
-#### Since the Government restricts the acces of Cowin API for third party integration without Authorization, user will not be able to view the results on entering pincode.
+#### Since the Government restricts the Access of Co-Win API for third party integration without Authorization, User will not be able to view the results on entering pincode.
