@@ -35,6 +35,8 @@ main {
   max-width: 40rem;
 }
 
+
+
 footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -55,6 +57,11 @@ footer {
   color: grey;
   padding-left: 0.5rem;
 }
+
+#SearchBox {
+  padding-bottom: 50px;
+  padding-top: 3.125rem;
+  }
 
 
 .white-section {
@@ -132,6 +139,15 @@ footer {
   color: white;
 }
 
+#td1 {
+  color: green;;
+}
+
+#td2 {
+  color: red;;
+}
+
+
 #link_id {
   text-decoration: none;
   color: black;
@@ -139,10 +155,7 @@ footer {
 
 [data-href] { cursor: pointer; }
 
-#SearchBox {
-padding-bottom: 50px;
-padding-top: 3.125rem;
-}
+
 
 /* covid */
 #covid-font {

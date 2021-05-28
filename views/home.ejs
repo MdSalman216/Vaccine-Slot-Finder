@@ -97,32 +97,52 @@
                 <tr>
                   <th style="width:15%;">Center Name</th>
                   <th style="width:12%;">Center Address</th>
-                  <th class="number" style="width:5%;">Age</th>
-                  <th class="number" style="width:10%;">Available Capacity</th>
-                  <th class="number" style="width:5%;">Dose1</th>
-                  <th class="number" style="width:5%;">Dose2</th>
-                  <th class="text" style="width:5%;">Vaccine Name</th>
+                  <th style="width:5%;">Age</th>
+                  <th style="width:10%;">Available Capacity</th>
+                  <th style="width:5%;">Dose1</th>
+                  <th style="width:5%;">Dose2</th>
+                  <th style="width:5%;">Vaccine Name</th>
                   <th style="width:10%;">Date</th>
                 </tr>
               </thead>
+
               <tbody class="no-border-x">
                 <% for(var i=0;i<data.length;i++) { %>
-                  <tr data-href onclick="window.location='https://www.cowin.gov.in/home';">
-                    <td><%= data[i].name %></td>
-                    <td><%= data[i].address %></td> 
-                    <td class="number"><%= data[i].min_age_limit %>+</td>
-                    <td class="number"><%= data[i].available_capacity %></td>
-                    <td class="number"><%= data[i].available_capacity_dose1 %></td>
-                    <td class="number"><%= data[i].available_capacity_dose2 %></td>
-                    <td class="text"><%= data[i].vaccine%></td>
-                    <td><%= data[i].date %></td> 
+                  <tr data-href onclick="window.location='https://selfregistration.cowin.gov.in/';">
+                    
+
+                    <% if (data[i].available_capacity != 0 || data[i].available_capacity_dose1 != 0 || data[i].available_capacity_dose2 != 0) { %>
+                      <td id="td1"><%= data[i].name %></td>
+                      <td id="td1"><%= data[i].address %></td> 
+                      <td id="td1"><%= data[i].min_age_limit %>+</td>
+                      <td id="td1" style="text-align: center;" ><%= data[i].available_capacity %></td>
+                      <td id="td1" style="text-align: center;" ><%= data[i].available_capacity_dose1 %></td>
+                      <td id="td1" style="text-align: center;" ><%= data[i].available_capacity_dose2 %></td>
+                      <td id="td1"><%= data[i].vaccine%></td>
+                      <td id="td1"><%= data[i].date %></td> 
+                    <% } else { %>
+                      <td id="td2"><%= data[i].name %></td>
+                      <td id="td2"><%= data[i].address %></td> 
+                      <td id="td2"><%= data[i].min_age_limit %>+</td>
+                      <td id="td2" style="text-align: center;" ><%= data[i].available_capacity %></td>
+                      <td id="td2" style="text-align: center;" ><%= data[i].available_capacity_dose1 %></td>
+                      <td id="td2" style="text-align: center;" ><%= data[i].available_capacity_dose2 %></td>
+                      <td id="td2"><%= data[i].vaccine%></td>
+                      <td id="td2"><%= data[i].date %></td> 
+                      <% } %>
+
+            
+                    
+                    
                   </tr>
                 <% } %> 
+
               </tbody>
             </table>
           </div>
         </div>
 
+        
 
     <!-- </main> -->
 
