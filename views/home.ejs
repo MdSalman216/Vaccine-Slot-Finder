@@ -102,7 +102,8 @@
                   <th style="width:5%;">Dose1</th>
                   <th style="width:5%;">Dose2</th>
                   <th style="width:5%;">Vaccine Name</th>
-                  <th style="width:10%;">Date</th>
+                  <th style="width:10%;">Date</th> 
+                  <th style="width:5%;">Fee Type</th> 
                 </tr>
               </thead>
 
@@ -120,6 +121,7 @@
                       <td id="td1" style="text-align: center;" ><%= data[i].available_capacity_dose2 %></td>
                       <td id="td1"><%= data[i].vaccine%></td>
                       <td id="td1"><%= data[i].date %></td> 
+                      <td id="td1"><%= data[i].fee_type %></td> 
                     <% } else { %>
                       <td id="td2"><%= data[i].name %></td>
                       <td id="td2"><%= data[i].address %></td> 
@@ -129,6 +131,7 @@
                       <td id="td2" style="text-align: center;" ><%= data[i].available_capacity_dose2 %></td>
                       <td id="td2"><%= data[i].vaccine%></td>
                       <td id="td2"><%= data[i].date %></td> 
+                      <td id="td2"><%= data[i].fee_type %></td> 
                       <% } %>
 
             
