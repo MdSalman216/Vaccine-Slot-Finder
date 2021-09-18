@@ -100,7 +100,7 @@ app.post("/", function (req, res) {
         });
     } else {
       res.render("failure", {
-        content: "OOPs! Government restricts API for third party integration.",
+        content: "OOPs! Bad Request. Try Again Later",
         confirmed: confirmed,
         recovered: recovered,
         deaths: deaths,

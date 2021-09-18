@@ -2,7 +2,6 @@
   --jumbotron-padding-y: 3rem;
 }
 
-
 .jumbotron {
   padding-top: var(--jumbotron-padding-y);
   padding-bottom: var(--jumbotron-padding-y);
@@ -14,7 +13,6 @@ main {
   padding-bottom: 9rem;
   background-color: white;
 }
-
 
 @media (min-width: 768px) {
   .jumbotron {
@@ -35,17 +33,15 @@ main {
   max-width: 40rem;
 }
 
-
-
 footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
   opacity: 0.3;
 }
 
-
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
-
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
 
 .syringe_icon {
   margin-right: 0.5rem;
@@ -53,7 +49,7 @@ footer {
 }
 
 .navbar_title {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   color: grey;
   padding-left: 0.5rem;
 }
@@ -61,14 +57,13 @@ footer {
 #SearchBox {
   padding-bottom: 50px;
   padding-top: 3.125rem;
-  }
-
+}
 
 .white-section {
   background-color: black;
   padding-top: 0%;
   padding-bottom: 0%;
-  margin-top : 7.5rem;
+  margin-top: 7.5rem;
 }
 
 .social-icon {
@@ -76,7 +71,6 @@ footer {
 }
 
 @media (max-width: 1028px) {
-
   #title {
     text-align: center;
   }
@@ -87,7 +81,7 @@ footer {
   }
 }
 
-.container-fluid{
+.container-fluid {
   padding: 4px 10px;
   justify-content: center;
 }
@@ -98,22 +92,20 @@ footer {
   padding-bottom: 20px;
 }
 
-.social-icon{
+.social-icon {
   color: #fff;
   /* margin: 20px 10px;
   justify-content: center; */
 }
 
-
 #copyright {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   color: white;
-  text-align:center;
+  text-align: center;
   margin-bottom: 0%;
   padding-top: 0px;
   margin-top: 20px;
 }
-
 
 /* Table */
 #customers {
@@ -122,14 +114,19 @@ footer {
   width: 100%;
 }
 
-#customers td, #customers th {
+#customers td,
+#customers th {
   /* border: 1px solid #ddd; */
   padding: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-#customers tr:hover {background-color: #ddd;}
+#customers tr:hover {
+  background-color: #ddd;
+}
 
 #customers th {
   padding-top: 12px;
@@ -140,26 +137,25 @@ footer {
 }
 
 #td1 {
-  color: green;;
+  color: green;
 }
 
 #td2 {
-  color: red;;
+  color: red;
 }
-
 
 #link_id {
   text-decoration: none;
   color: black;
 }
 
-[data-href] { cursor: pointer; }
-
-
+[data-href] {
+  cursor: pointer;
+}
 
 /* covid */
 #covid-font {
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-weight: bold;
   /* color : red; */
 }
@@ -172,9 +168,7 @@ footer {
   color: red;
 }
 
-#heartbeat{
-  height : 4rem;
-  width : 4rem;
+#heartbeat {
+  height: 4rem;
+  width: 4rem;
 }
-
-
